@@ -1,0 +1,634 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "lastUpdated": "2023-10-31T11:00:28Z"
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:c20e913d-49e7-40cc-a9e2-42851a654e62"
+    },
+    "type": "document",
+    "timestamp": "2023-10-31T11:00:28Z",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "dc8d26a1-71e7-4925-bdc0-7dccef012b4f",
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://ehealth.gov.hk/iams",
+                            "code": "PPP",
+                            "display": "PPP"
+                        }
+                    ],
+                    "text": "GOPC"
+                },
+                "subject": {
+                    "reference": "Patient/006f7e19-3881-438d-8e3b-6325ada87e7b"
+                },
+                "date": "2023-10-31T11:00:28Z",
+                "author": [
+                    {
+                        "reference": "Organisation/eHRSS",
+                        "display": "eHRSS"
+                    }
+                ],
+                "title": "General Outpatient Clinic Public-Private Partnership Programme",
+                "section": [
+                    {
+                        "title": "General Outpatient Clinic Public-Private Partnership Programme",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/iams",
+                                    "code": "GOPC",
+                                    "display": "GOPC"
+                                }
+                            ],
+                            "text": "GOPC"
+                        },
+                        "entry": [
+                            {
+                                "reference": "QuestionnaireResponse/05f8ff4f-5ca1-4e9d-ac7b-35d8037865a6",
+                                "identifier": {
+                                    "system": "http://ehealth.gov.hk/Recordkey",
+                                    "value": "1866122"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "05f8ff4f-5ca1-4e9d-ac7b-35d8037865a6",
+                "contained": [
+                    {
+                        "resourceType": "Patient",
+                        "id": "006f7e19-3881-438d-8e3b-6325ada87e7b",
+                        "identifier": [
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                            "code": "EHRNO"
+                                        }
+                                    ]
+                                },
+                                "value": "598774893500"
+                            },
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                            "code": "ID"
+                                        }
+                                    ]
+                                },
+                                "value": " Q1730351"
+                            }
+                        ],
+                        "active": true,
+                        "name": [
+                            {
+                                "family": "CHAN",
+                                "given": [
+                                    "MAN MAN"
+                                ]
+                            }
+                        ],
+                        "gender": "female",
+                        "birthDate": "1974-12-25"
+                    }
+                ],
+                "identifier": {
+                    "value": "1866122"
+                },
+                "questionnaire": "https://ehealth.gov.hk/iams/PPP-GOPC",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/006f7e19-3881-438d-8e3b-6325ada87e7b"
+                },
+                "authored": "2017-05-09",
+                "item": [
+                    {
+                        "linkId": "ppp",
+                        "item": [
+                            {
+                                "linkId": "project_cd",
+                                "answer": [
+                                    {
+                                        "valueString": "PPP"
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "module_cd",
+                                "answer": [
+                                    {
+                                        "valueString": "GOPC"
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "ehr_number",
+                                "answer": [
+                                    {
+                                        "valueString": "598774893500"
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "consultation",
+                                "item": [
+                                    {
+                                        "linkId": "ref_no",
+                                        "definition": "http://HKCTT/-2145204001",
+                                        "answer": [
+                                            {
+                                                "valueString": "0001015487"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "consultation_date",
+                                        "definition": "http://HKCTT/1003215",
+                                        "answer": [
+                                            {
+                                                "valueDateTime": "2017-05-09T00:00:00Z"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "chronic_disease",
+                                        "definition": "http://HKCTT/1006339",
+                                        "answer": [
+                                            {
+                                                "valueString": "HT+DM+Hyperlipidaemia"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "assessment",
+                                "item": [
+                                    {
+                                        "linkId": "systolic_bp",
+                                        "definition": "http://HKCTT/102215",
+                                        "answer": [
+                                            {
+                                                "valueString": "118"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "diastolic_bp",
+                                        "definition": "http://HKCTT/102214",
+                                        "answer": [
+                                            {
+                                                "valueString": "88"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "pulse",
+                                        "definition": "http://HKCTT/1002266",
+                                        "answer": [
+                                            {
+                                                "valueString": "80"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "temperature",
+                                        "definition": "http://HKCTT/1002338",
+                                        "answer": [
+                                            {
+                                                "valueString": "37.2"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "weight_kg",
+                                        "definition": "http://HKCTT/100118",
+                                        "answer": [
+                                            {
+                                                "valueString": "66.8"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "height_m",
+                                        "definition": "http://HKCTT/100119",
+                                        "answer": [
+                                            {
+                                                "valueString": "1.7"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "bmi",
+                                        "definition": "http://HKCTT/100117",
+                                        "answer": [
+                                            {
+                                                "valueString": "24.4"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "hstix",
+                                        "definition": "http://HKCTT/1002592",
+                                        "answer": [
+                                            {
+                                                "valueString": "1.7"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "smoking_habit",
+                                        "definition": "http://HKCTT/102141",
+                                        "answer": [
+                                            {
+                                                "valueCoding": {
+                                                    "system": "https://www.ehealth.gov.hk/hkctt/smoking_habit",
+                                                    "code": "N",
+                                                    "display": "Non-Smoker"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "alchol_use",
+                                        "definition": "http://HKCTT/102141",
+                                        "answer": [
+                                            {
+                                                "valueCoding": {
+                                                    "system": "https://www.ehealth.gov.hk/hkctt/alchol_use",
+                                                    "code": "N",
+                                                    "display": "Non-Drinker"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "note_diagnosis",
+                                "item": [
+                                    {
+                                        "linkId": "diagnosis",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ],
+                                                "item": [
+                                                    {
+                                                        "linkId": "diagnosis_v",
+                                                        "definition": "http://HKCTT/1006311",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/diagnosis_v",
+                                                                    "code": "HT",
+                                                                    "display": "Hypertension"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "diagnosis_v_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "7529"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "2"
+                                                    }
+                                                ],
+                                                "item": [
+                                                    {
+                                                        "linkId": "diagnosis_v",
+                                                        "definition": "http://HKCTT/1006311",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/diagnosis_v",
+                                                                    "code": "HYPERLIPIDAEMIA",
+                                                                    "display": "Hyperlipidaemia"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "diagnosis_v_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "4323"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "3"
+                                                    }
+                                                ],
+                                                "item": [
+                                                    {
+                                                        "linkId": "diagnosis_v",
+                                                        "definition": "http://HKCTT/1006311",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/diagnosis_v",
+                                                                    "code": "DM",
+                                                                    "display": "DM"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "diagnosis_v_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "3983"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "symptom",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ],
+                                                "item": [
+                                                    {
+                                                        "linkId": "symptom_v",
+                                                        "definition": "http://HKCTT/1006312",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/symptom_v",
+                                                                    "code": "ABDOMINAL_PAIN",
+                                                                    "display": "Abdominal pain"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "symptom_v_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "15982"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "2"
+                                                    }
+                                                ],
+                                                "item": [
+                                                    {
+                                                        "linkId": "symptom_v",
+                                                        "definition": "http://HKCTT/1006312",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/symptom_v",
+                                                                    "code": "BACKACHE",
+                                                                    "display": "Backache"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "symptom_v_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "13792"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "medication",
+                                "item": [
+                                    {
+                                        "linkId": "s_drug_repeater",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ],
+                                                "item": [
+													{
+                                                        "linkId": "s_drug_prn",
+                                                        "definition": "http://HKCTT/1006321",
+                                                        "answer": [
+                                                            {
+                                                                "valueString": "PRN"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "s_drug_duration",
+                                                        "definition": "http://HKCTT/1005276",
+                                                        "answer": [
+                                                            {
+                                                                "valueString": "12"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "s_drug_dosage_freq",
+                                                        "definition": "http://HKCTT/1006341",
+                                                        "answer": [
+                                                            {
+                                                                "valueString": "10mg daily"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "s_drug_item",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/s_drug_item",
+                                                                    "code": "AMLO01",
+                                                                    "display": "Amlodipine (Besylate) Tablet 5mg"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "s_drug_item_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "6054491"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "s_drug_dur_unit",
+                                                        "definition": "http://HKCTT/1006319",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/s_drug_dur_unit",
+                                                                    "code": "W",
+                                                                    "display": "Week(s)"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "s_drug_dur_unit_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "7703285"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "o_drug_repeater",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ],
+                                                "item": [
+													{
+                                                        "linkId": "o_drug_prn",
+                                                        "definition": "http://HKCTT/1006308",
+                                                        "answer": [
+                                                            {
+                                                                "valueString": "PRN"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "o_drug_duration",
+                                                        "definition": "http://HKCTT/1006310",
+                                                        "answer": [
+                                                            {
+                                                                "valueString": "3"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "o_drug_name",
+                                                        "definition": "http://HKCTT/1006342",
+                                                        "answer": [
+                                                            {
+                                                                "valueString": "calamine cream"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "o_drug_dosage_freq",
+                                                        "definition": "http://HKCTT/1006344",
+                                                        "answer": [
+                                                            {
+                                                                "valueString": "LA tds"
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "linkId": "o_drug_dur_unit",
+                                                        "definition": "http://HKCTT/1006320",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/o_drug_dur_unit",
+                                                                    "code": "D",
+                                                                    "display": "Day(s)"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "o_drug_dur_unit_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "7703285"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

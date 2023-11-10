@@ -1,0 +1,199 @@
+HL7 Hong Kong Connectathon 2023 - 1st Event
+
+***************************************************************************************
+[Part 1] Encounter Record Data Upload Challenge
+
+Learn about the bulk-load standard of encounter record data upload
+
+The specifications of the Encounter record can be located in the below link.
+"Encounter_simplified_document v6.3.2.pdf"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_1_Encounter_Record_Upload/Encounter_simplified_document%20v6.3.2.pdf)
+"Data Requirement Specification for eHR Encounter Record v1.4.3.pdf"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_1_Encounter_Record_Upload/Data%20Requirement%20Specification%20for%20eHR%20Encounter%20Record%20v1.4.3.pdf)
+"BLS Technical Interface Specification for eHR Encounter Record v1.4.4.pdf"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_1_Encounter_Record_Upload/BLS%20Technical%20Interface%20Specification%20for%20eHR%20Encounter%20Record%20v1.4.4.pdf)
+
+***************************************************************************************
+
+---------------------------------------------------------------------------------------
+[E1P1Q1] Creating the Patient List (PL)
+---------------------------------------------------------------------------------------
+Given that there are two Healthcare Recipients' (HCRs) information
+
+HCR1
+eHR number: 317450535389
+Document Type: ID
+Document Number : W1200073
+
+HCR2
+eHR number: 642970757724
+Document Type: OC
+Document Number : OC230714162954
+
+Please fill in the HCRs' Document Type and Document Number in Patient List (PL) file from line 33 to line 34.
+ 
+Tips: The reference of Recipient List (PL) Interface File can be found in the Section 9 of the document.
+
+ANSWER:
+317450535389|M|1988-03-08 00:00:00.000||||CHAN|BURRY|\CR\
+642970757724|F|1968-08-08 00:00:00.000||||LEE|APPLE|\CR\
+EOF.2.9907819043.MOCK_SAMPLE.ENCTR.PL.1.20231103133300
+
+---------------------------------------------------------------------------------------
+[E1P1Q2] Creating the Structured Data File (DF)
+---------------------------------------------------------------------------------------
+HCP is going to upload an Encounter record of a new outpatient appointment on 05 Nov 2023.
+
+Please choose the best option of Encounter Structured Data File (DF) below and fill in (A) to (F) in the answer.
+
+Tips: The reference of Structured Data (DF) File can be found in the Section 8 of the document.
+
+(A)
+642970757724|RECORD_KEY_TEST_1|2023-11-05 00:00:00.000|I|2023-11-01 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231130141100
+
+(B)
+642970757724|RECORD_KEY_TEST_1|2023-11-01 00:00:00.000|I|2023-11-05 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231130141100
+
+(C)
+642970757724|RECORD_KEY_TEST_1|2023-11-01 00:00:00.000|I|2023-11-01 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-11-05 00:00:00.000||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231130141100
+
+(D)
+642970757724|RECORD_KEY_TEST_1|2023-11-01 00:00:00.000|I|2023-11-01 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1|2023-11-05 00:00:00.000|||||||||||||||||||||||||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231130141100
+
+(E)
+642970757724|RECORD_KEY_TEST_1|2023-11-01 00:00:00.000|I|2023-11-01 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1|||||||||||||||||||||||||||||||||||||||||||||||||||||2023-11-05 00:00:00.000|||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231130141100
+
+(F)
+642970757724|RECORD_KEY_TEST_1|2023-11-01 00:00:00.000|I|2023-11-01 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231105000000
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+---------------------------------------------------------------------------------------
+[E1P1Q3] Updating a encounter record in eHR
+---------------------------------------------------------------------------------------
+HCP uploaded one record which belonged to HCR 1 and the DF as below. However, it is found that the appointment date is input wrongly. Therefore, it is required to update the corresponding record.
+
+Below is the record uploaded.
+642970757724|MOCK_ENCTR_HCR2|2023-11-01 00:00:00.000|I|2023-11-01 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-10-12 00:00:00.000||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231103133300
+
+Tips: The reference of Structured Data (DF) File can be found in the Section 8 of the document.
+
+The correct appointment date is 21 Oct 2023. Please choose the best DF file content below to update the same record in eHR, and fill in (A) to (F) in the answer.
+
+(A)
+642970757724|MOCK_ENCTR_HCR2|2023-11-01 01:00:00.000|I|2023-11-02  01:05:30.220|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-11-18 00:00:00.000||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231103143301
+ 
+(B)
+642970757724|MOCK_ENCTR_HCR2|2023-11-01 01:00:00.000|U|2023-11-02 01:05:30.220|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-11-18 00:00:00.000||||||||||||||||||||||||||||||||||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231103143301
+
+(C)
+642970757724|MOCK_ENCTR_HCR2|2023-11-01 01:00:00.000|I|2023-11-18 16:47:39.050|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-10-12 00:00:00.000||||||||||||||||||||||||||||||||2023-11-18 00:00:00.000||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231103143301 
+ 
+(D)
+642970757724|MOCK_ENCTR_HCR2|2023-11-01 01:00:00.000|U|2023-11-18 16:47:39.050|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-10-12 00:00:00.000||||||||||||||||||||||||||||||||2023-11-18 16:47:39.050||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231103143301
+
+(E)
+642970757724|MOCK_ENCTR_HCR2|2023-11-01 01:00:00.000|I|2023-11-01 14:45:21.360|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-11-18 00:00:00.000||||||||||||||||||||||||||||||||2023-11-01 14:45:21.360||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231103143301
+ 
+(F)
+642970757724|MOCK_ENCTR_HCR2|2023-11-01 01:00:00.000|U|2023-11-01 14:45:21.360|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||2023-11-18 00:00:00.000||||||||||||||||||||||||||||||||2023-11-01 14:45:21.360||\CR\
+EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231103143301
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+
+
+
+
+
+
+
+
+
+***************************************************************************************
+[Part 2] Drug Record Download
+
+Learn about the drug records downloaded from eHR
+
+The specifications of the Drug record can be located in the below link.
+"[G132] DDS for eHR Drug Record Download v1.1 (20230914).pdf"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/%5BG132%5D%20DDS%20for%20eHR%20Drug%20Record%20Download%20v1.1%20(20230914).pdf)
+
+***************************************************************************************
+
+---------------------------------------------------------------------------------------
+[E1P2Q1] Referring to the sample file "RXO_sample_L3.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/RXO_sample_L3.json), what is the name of the patient for the medication order?
+---------------------------------------------------------------------------------------
+
+Tips: The reference to Patient resource can be found in the Section 10.1.4 of the document.
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+---------------------------------------------------------------------------------------
+[E1P2Q2] Referring to the sample file "RXO_sample_L3.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/RXO_sample_L3.json), what is the dosage frequency for Panadol ordered on 13 Mar 2023?
+---------------------------------------------------------------------------------------
+
+Tips: The reference to MedicationRequest resource can be found in the Section 10.1.6 of the document.
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+---------------------------------------------------------------------------------------
+[E1P2Q3] Referring to the sample file "RXO_sample_L3.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/RXO_sample_L3.json), what is the terminology ID for "Panadol (paracetamol) oral tablet 500 mg (HK-02280)" in Hong Kong Medication Terminology Table (HKMTT)?
+---------------------------------------------------------------------------------------
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+---------------------------------------------------------------------------------------
+[E1P2Q4] Referring to the sample file "RXO_sample_L2.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/RXO_sample_L2.json), what is the coding system used for "PARACETAMOL (ORAL)"?
+---------------------------------------------------------------------------------------
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+---------------------------------------------------------------------------------------
+[E1P2Q5] Referring to the Q3 and Q4 about "Paracetamol", which of the 2 coding systems is better for information exchange?
+---------------------------------------------------------------------------------------
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+
+
+
+
+
+
+
+
+
+***************************************************************************************
+[Part 3] General Outpatient Clinic (GOPC) Public-Private Partnership Programme (PPP) Data Download
+
+Learn about the GOPC PPP data downloaded from eHR
+
+The specifications of the GOPC PPP data can be located in the below link.
+"Technical Interface Specification for PPP Data Interface (draft v1.0) 20231107.pdf"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_3_GOPC_PPP_Data_Download/Technical%20Interface%20Specification%20for%20PPP%20Data%20Interface%20(draft%20v1.0)%2020231107.pdf)
+
+***************************************************************************************
+
+---------------------------------------------------------------------------------------
+[E1P3Q1] Referring to the sample file "connectathon_ppp_sample_data.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_3_GOPC_PPP_Data_Download/connectathon_ppp_sample_data.json), what chronic disease does the patient have?
+---------------------------------------------------------------------------------------
+
+Tips: The reference to QuestionnaireResponse resource can be found in the Section 11.4 of the document.
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__
+
+---------------------------------------------------------------------------------------
+[E1P3Q2] Referring to the sample file "connectathon_ppp_sample_data.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_3_GOPC_PPP_Data_Download/connectathon_ppp_sample_data.json), what is the patient's body temperature?
+---------------------------------------------------------------------------------------
+
+Tips: The reference to QuestionnaireResponse resource can be found in the Section 11.4 of the document.
+
+ANSWER: __PUT_YOUR_ANSWER_HERE__

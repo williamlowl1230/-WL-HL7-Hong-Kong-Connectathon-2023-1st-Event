@@ -1,0 +1,376 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "lastUpdated": "2023-10-25T16:11:58Z"
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:ad9b66f7-b5e3-46ed-8409-8ae562b0d19f"
+    },
+    "type": "document",
+    "timestamp": "2023-10-25T16:11:58Z",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "e91211b0-f132-49cc-b28d-69aa2cb0c59b",
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://ehealth.gov.hk/iams",
+                            "code": "PPP",
+                            "display": "PPP"
+                        }
+                    ],
+                    "text": "GOPC"
+                },
+                "subject": {
+                    "reference": "Patient/627ff588-9dbe-4478-ab8e-0bc1aa6b42d7"
+                },
+                "date": "2023-10-25T16:11:58Z",
+                "author": [
+                    {
+                        "reference": "Organisation/eHRSS",
+                        "display": "eHRSS"
+                    }
+                ],
+                "title": "General Outpatient Clinic Public-Private Partnership Programme",
+                "section": [
+                    {
+                        "title": "General Outpatient Clinic Public-Private Partnership Programme",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/iams",
+                                    "code": "GOPC",
+                                    "display": "GOPC"
+                                }
+                            ],
+                            "text": "GOPC"
+                        },
+                        "entry": [
+                            {
+                                "reference": "QuestionnaireResponse/773dfa1d-82a4-48dc-9b30-84e1f026501e",
+                                "identifier": {
+                                    "system": "http://ehealth.gov.hk/Recordkey",
+                                    "value": "2322400"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "773dfa1d-82a4-48dc-9b30-84e1f026501e",
+                "contained": [
+                    {
+                        "resourceType": "Patient",
+                        "id": "627ff588-9dbe-4478-ab8e-0bc1aa6b42d7",
+                        "identifier": [
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                            "code": "EHRNO"
+                                        }
+                                    ]
+                                },
+                                "value": "439444303579"
+                            },
+                            {
+                                "type": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                            "code": "ID"
+                                        }
+                                    ]
+                                },
+                                "value": " Q2779893"
+                            }
+                        ],
+                        "active": true,
+                        "name": [
+                            {
+                                "family": "CHAN",
+                                "given": [
+                                    "ONE"
+                                ]
+                            }
+                        ],
+                        "gender": "female",
+                        "birthDate": "1997-01-01"
+                    }
+                ],
+                "identifier": {
+                    "value": "2322400"
+                },
+                "questionnaire": "https://ehealth.gov.hk/iams/PPP-GOPC",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/627ff588-9dbe-4478-ab8e-0bc1aa6b42d7"
+                },
+                "authored": "2023-10-25",
+                "item": [
+                    {
+                        "linkId": "ppp",
+                        "item": [
+                            {
+                                "linkId": "project_cd",
+                                "answer": [
+                                    {
+                                        "valueString": "PPP"
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "module_cd",
+                                "answer": [
+                                    {
+                                        "valueString": "GOPC"
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "ehr_number",
+                                "answer": [
+                                    {
+                                        "valueString": "439444303579"
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "consultation",
+                                "item": [
+                                    {
+                                        "linkId": "ref_no",
+                                        "definition": "http://HKCTT/-2145204001",
+                                        "answer": [
+                                            {
+                                                "valueString": "0001014127"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "chronic_disease",
+                                        "definition": "http://HKCTT/1006339",
+                                        "answer": [
+                                            {
+                                                "valueString": "DM"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "assessment",
+                                "item": [
+                                    {
+                                        "linkId": "systolic_bp",
+                                        "definition": "http://HKCTT/102215",
+                                        "answer": [
+                                            {
+                                                "valueString": "150"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "diastolic_bp",
+                                        "definition": "http://HKCTT/102214",
+                                        "answer": [
+                                            {
+                                                "valueString": "70"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "pulse",
+                                        "definition": "http://HKCTT/1002266",
+                                        "answer": [
+                                            {
+                                                "valueString": "75"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "temperature",
+                                        "definition": "http://HKCTT/1002338",
+                                        "answer": [
+                                            {
+                                                "valueString": "37"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "weight_kg",
+                                        "definition": "http://HKCTT/100118",
+                                        "answer": [
+                                            {
+                                                "valueString": "55"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "height_m",
+                                        "definition": "http://HKCTT/100119",
+                                        "answer": [
+                                            {
+                                                "valueString": "1.6"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "bmi",
+                                        "definition": "http://HKCTT/100117",
+                                        "answer": [
+                                            {
+                                                "valueString": "21.48"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "hstix",
+                                        "definition": "http://HKCTT/1002592",
+                                        "answer": [
+                                            {
+                                                "valueString": "7.4"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "drug_comp",
+                                        "definition": "http://HKCTT/1001746",
+                                        "answer": [
+                                            {
+                                                "valueString": "Poor"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "med_side_effect",
+                                        "definition": "http://HKCTT/1001743",
+                                        "answer": [
+                                            {
+                                                "valueString": "No"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "dietary_comp",
+                                        "definition": "http://HKCTT/1001748",
+                                        "answer": [
+                                            {
+                                                "valueString": "Fair"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "exercise",
+                                        "definition": "http://HKCTT/1006330",
+                                        "answer": [
+                                            {
+                                                "valueString": "None"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "note_diagnosis",
+                                "item": [
+                                    {
+                                        "linkId": "diagnosis",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ],
+                                                "item": [
+                                                    {
+                                                        "linkId": "diagnosis_v",
+                                                        "definition": "http://HKCTT/1006311",
+                                                        "answer": [
+                                                            {
+                                                                "valueCoding": {
+                                                                    "system": "https://www.ehealth.gov.hk/hkctt/diagnosis_v",
+                                                                    "code": "DM",
+                                                                    "display": "DM"
+                                                                }
+                                                            }
+                                                        ],
+                                                        "item": [
+                                                            {
+                                                                "linkId": "diagnosis_v_tid",
+                                                                "answer": [
+                                                                    {
+                                                                        "valueString": "3983"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "symptom",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "medication",
+                                "item": [
+                                    {
+                                        "linkId": "s_drug_repeater",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "linkId": "o_drug_repeater",
+                                        "item": [
+                                            {
+                                                "linkId": "repeat_item_sid",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "1"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,154 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "lastUpdated": "2023-11-02T12:09:02.376+08:00"
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:bd767db4-f133-4c23-a70f-ba7f6e0a62df"
+    },
+    "type": "document",
+    "timestamp": "2023-11-02T12:09:02.376+08:00",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "123",
+                "status": "final",
+                "type": {
+                    "text": "Hong Kong eHR Healthcare Document"
+                },
+                "subject": {
+                    "reference": "Patient/ae8f1d9f-69da-4ede-8020-23bf48339673"
+                },
+                "date": "2023-11-02T12:09:02+08:00",
+                "author": [
+                    {
+                        "reference": "Organization/HKG-EHR"
+                    }
+                ],
+                "title": "Medication Dispense"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "ae8f1d9f-69da-4ede-8020-23bf48339673",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                    "code": "EHRNO"
+                                }
+                            ]
+                        },
+                        "value": "845126516613"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                    "code": "OP"
+                                }
+                            ]
+                        },
+                        "value": "202309280002"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "CHAN",
+                        "given": [
+                            "TAI MAN"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1980-01-02"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "89018f7672fd4d3f6e45a145490e951b",
+                "identifier": [
+                    {
+                        "system": "http://ehealth.gov.hk/FHIR/pvdr",
+                        "value": "4011269272"
+                    }
+                ],
+                "name": "VH Hospital",
+                "alias": [
+                    "VH"
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "HKG-EHR",
+                "active": true,
+                "name": "HKG-EHR"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "MedicationDispense",
+                "extension": [
+                    {
+                        "url": "1003855-PrescriptionOrderNumber",
+                        "valueString": "220008300"
+                    },
+                    {
+                        "url": "1003852-PrescribingInfo",
+                        "valueReference": {
+                            "reference": "Organization/89018f7672fd4d3f6e45a145490e951b"
+                        }
+                    },
+                    {
+                        "url": "1003858-DrugSequenceNumber",
+                        "valueInteger": 1
+                    }
+                ],
+                "status": "completed",
+                "medicationCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "local",
+                            "code": "SOMA12",
+                            "display": "SOMATROPIN (SAIZEN) CARTRIDGE 6MG/1.03ML (SUBCUTANEOUS)"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/ae8f1d9f-69da-4ede-8020-23bf48339673"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "extension": [
+                                {
+                                    "url": "1003851-DispensingInstLocalName",
+                                    "valueString": "VH"
+                                }
+                            ],
+                            "identifier": {
+                                "value": "4011269272"
+                            },
+                            "display": "VH Hospital"
+                        }
+                    }
+                ],
+                "whenHandedOver": "2022-09-13T15:43:57+08:00",
+                "dosageInstruction": [
+                    {
+                        "text": "INJECT SUBCUTANEOUSLY <6> MG ONCE (EVERY FRIDAY) [QTY = 1]"
+                    }
+                ]
+            }
+        }
+    ]
+}

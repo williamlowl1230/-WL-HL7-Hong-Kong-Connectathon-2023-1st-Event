@@ -1,0 +1,285 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "lastUpdated": "2023-11-02T11:57:21.395+08:00"
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:68a5e235-a565-43d3-a197-e857e1fa7f81"
+    },
+    "type": "document",
+    "timestamp": "2023-11-02T11:57:21.395+08:00",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "123",
+                "status": "final",
+                "type": {
+                    "text": "Hong Kong eHR Healthcare Document"
+                },
+                "subject": {
+                    "reference": "Patient/e39606f9-4fa6-4543-9c12-473be9234613"
+                },
+                "date": "2023-11-02T11:57:21+08:00",
+                "author": [
+                    {
+                        "reference": "Organization/HKG-EHR"
+                    }
+                ],
+                "title": "Medication Dispense"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "e39606f9-4fa6-4543-9c12-473be9234613",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                    "code": "EHRNO"
+                                }
+                            ]
+                        },
+                        "value": "370008751285"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                    "code": "OP"
+                                }
+                            ]
+                        },
+                        "value": "2023110100074"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "CHAN",
+                        "given": [
+                            "TAI MAN"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1980-01-02"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "89018f7672fd4d3f6e45a145490e951b",
+                "identifier": [
+                    {
+                        "system": "http://ehealth.gov.hk/FHIR/pvdr",
+                        "value": "4011269272"
+                    }
+                ],
+                "name": "VH Hospital",
+                "alias": [
+                    "VH"
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "HKG-EHR",
+                "active": true,
+                "name": "HKG-EHR"
+            }
+        },
+        {
+            "resource":{
+               "resourceType":"MedicationDispense",
+               "extension":[
+                  {
+                     "url":"1003855-PrescribionOrderNumber",
+                     "valueString":"230004353"
+                  },
+                  {
+                     "url":"1003858-DrugSequenceNumber",
+                     "valueInteger":1
+                  }
+               ],
+               "status":"completed",
+               "medicationCodeableConcept":{
+                  "coding":[
+                     {
+                        "system":"https://ehealth.gov.hk/hkmtt/"
+                     },
+                     {
+                        "system":"local",
+                        "code":"SODI78",
+                        "display":"SODIUM CHLORIDE 0.9% NASAL DOUCHE 1L (INTRANASAL)"
+                     }
+                  ]
+               },
+               "subject":{
+                    "reference": "Patient/e39606f9-4fa6-4543-9c12-473be9234613"
+               },
+               "performer":[
+                  {
+                     "actor":{
+                        "extension":[
+                           {
+                              "url":"1003851-DispensingInstLocalName",
+                              "valueString":"VH"
+                           }
+                        ],
+                        "identifier":{
+                           "value":"4011269272"
+                        },
+                        "display":"VH Hospital"
+                     }
+                  }
+               ],
+               "whenHandedOver":"2023-04-18T16:53:09+08:00",
+               "dosageInstruction":[
+                  {
+                     "text":"WASH BOTH NOSTRILS DAILY [QTY = 2]"
+                  }
+               ]
+            }
+        },		
+        {
+            "resource": {
+                "resourceType": "MedicationDispense",
+                "extension": [
+                    {
+                        "url": "1003855-PrescriptionOrderNumber",
+                        "valueString": "220008275"
+                    },
+                    {
+                        "url": "1003852-PrescribingInfo",
+                        "valueReference": {
+                            "reference": "Organization/89018f7672fd4d3f6e45a145490e951b"
+                        }
+                    },
+                    {
+                        "url": "1003858-DrugSequenceNumber",
+                        "valueInteger": 1
+                    },
+                    {
+                        "url": "1005665-DoseValueSequenceNumber",
+                        "valueInteger": 0
+                    },
+                    {
+                        "url": "1005623-Frequency",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://ehealth.gov.hk/hkmtt/",
+                                    "code": "7703152",
+                                    "display": "once daily"
+                                }
+                            ],
+                            "text": "DAILY"
+                        }
+                    },
+                    {
+                        "url": "1005296-DrugTreatmentStartDate",
+                        "valueDate": "2022-09-13"
+                    }
+                ],
+                "status": "completed",
+                "medicationCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "https://ehealth.gov.hk/hkmtt/",
+                            "code": "6079645",
+                            "display": "Mixtard 30 HM (insulin isophane human + insulin soluble human) subcutaneous suspension for injection (cartridge) (70%/30%) 100 international unit / mL (3 mL)"
+                        },
+                        {
+                            "system": "local",
+                            "code": "INSU27",
+                            "display": "INSULIN HUMAN (MIXTARD 30) PENFILL 100U/ML 3ML (SUBCUTANEOUS)"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/e39606f9-4fa6-4543-9c12-473be9234613"
+                },
+                "performer": [
+                    {
+                        "actor": {
+                            "extension": [
+                                {
+                                    "url": "1003851-DispensingInstLocalName",
+                                    "valueString": "VH"
+                                }
+                            ],
+                            "identifier": {
+                                "value": "4011269272"
+                            },
+                            "display": "VH Hospital"
+                        }
+                    }
+                ],
+                "quantity": {
+                    "extension": [
+                        {
+                            "url": "1005293-QuantityUnitLocalDesc",
+                            "valueString": "NUMBER(S)"
+                        }
+                    ],
+                    "value": 1,
+                    "unit": "number",
+                    "system": "https://ehealth.gov.hk/hkmtt/",
+                    "code": "7703702"
+                },
+                "daysSupply": {
+                    "extension": [
+                        {
+                            "url": "1005643-DurationUnitLocalDesc",
+                            "valueString": "Weeks"
+                        }
+                    ],
+                    "value": 4,
+                    "unit": "week",
+                    "system": "https://ehealth.gov.hk/hkmtt/",
+                    "code": "7703286"
+                },
+                "whenHandedOver": "2023-02-25T15:06:05+08:00",
+                "dosageInstruction": [
+                    {
+                        "sequence": 0,
+                        "text": "INJECT SUBCUTANEOUSLY <10> UNIT(S) DAILY [QTY = 1]",
+                        "asNeededBoolean": false,
+                        "route": {
+                            "coding": [
+                                {
+                                    "system": "https://ehealth.gov.hk/hkmtt/",
+                                    "code": "7700058",
+                                    "display": "subcutaneous"
+                                }
+                            ],
+                            "text": "SUBCUTANEOUSLY"
+                        },
+                        "doseAndRate": [
+                            {
+                                "doseQuantity": {
+                                    "extension": [
+                                        {
+                                            "url": "1005291-DoseUnitLocalDesc",
+                                            "valueString": "UNIT(S)"
+                                        }
+                                    ],
+                                    "value": 10,
+                                    "unit": "unit",
+                                    "system": "https://ehealth.gov.hk/hkmtt/",
+                                    "code": "7700253"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

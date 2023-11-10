@@ -1,0 +1,140 @@
+{
+    "resourceType": "Bundle",
+    "meta": {
+        "lastUpdated": "2023-11-02T12:14:34.980+08:00"
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:62f01d67-e3e5-4f24-8b3e-20bbbad43a21"
+    },
+    "type": "document",
+    "timestamp": "2023-11-02T12:14:34.980+08:00",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "123",
+                "status": "final",
+                "type": {
+                    "text": "Hong Kong eHR Healthcare Document"
+                },
+                "subject": {
+                    "reference": "Patient/d14ae3c4-8ac5-4dce-9aac-a9df01240cb3"
+                },
+                "date": "2023-11-02T12:14:34+08:00",
+                "author": [
+                    {
+                        "reference": "Organization/HKG-EHR"
+                    }
+                ],
+                "title": "Medication Request"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "d14ae3c4-8ac5-4dce-9aac-a9df01240cb3",
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                    "code": "EHRNO"
+                                }
+                            ]
+                        },
+                        "value": "845126516613"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ehealth.gov.hk/FHIR/typeofID-ext",
+                                    "code": "OP"
+                                }
+                            ]
+                        },
+                        "value": "202309280002"
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "CHAN",
+                        "given": [
+                            "TAI MAN"
+                        ]
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1980-01-02"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "HKG-EHR",
+                "active": true,
+                "name": "HKG-EHR"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "PractitionerRole",
+                "id": "85832e9684aac0427fbfde8a32e6473c",
+                "practitioner": {
+                    "display": "Not specified"
+                },
+                "organization": {
+                    "identifier": {
+                        "value": "4011269272"
+                    },
+                    "display": "VH Hospital"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "MedicationRequest",
+                "extension": [
+                    {
+                        "url": "1005323-DrugSequenceNumber",
+                        "valueInteger": 1
+                    }
+                ],
+                "identifier": [
+                    {
+                        "value": "MOEVH 2300019917"
+                    }
+                ],
+                "status": "completed",
+                "intent": "order",
+                "medicationCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "local",
+                            "display": "PARACETAMOL (ORAL)"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Patient/d14ae3c4-8ac5-4dce-9aac-a9df01240cb3"
+                },
+                "authoredOn": "2023-02-28T09:08:24+08:00",
+                "requester": {
+                    "reference": "PractitionerRole/85832e9684aac0427fbfde8a32e6473c"
+                },
+                "note": [
+                    {
+                        "text": "[Dispense by Pharmacy]"
+                    }
+                ],
+                "dosageInstruction": [
+                    {
+                        "text": "PARACETAMOL tablet\noral :  500 mg qid for 2 weeks"
+                    }
+                ]
+            }
+        }
+    ]
+}
