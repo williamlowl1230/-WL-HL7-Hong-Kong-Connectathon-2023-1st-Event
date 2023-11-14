@@ -32,8 +32,8 @@ Please fill in the HCRs' Document Type and Document Number in Patient List (PL) 
 Tips: The reference of Recipient List (PL) Interface File can be found in the Section 9 of the document.
 
 ANSWER:
-317450535389|M|1988-03-08 00:00:00.000||||CHAN|BURRY|\CR\
-642970757724|F|1968-08-08 00:00:00.000||||LEE|APPLE|\CR\
+317450535389|M|1988-03-08 00:00:00.000|W1200073|ID|W1200073|CHAN|BURRY|\CR\
+642970757724|F|1968-08-08 00:00:00.000||OC|OC230714162954|LEE|APPLE|\CR\
 EOF.2.9907819043.MOCK_SAMPLE.ENCTR.PL.1.20231103133300
 
 ---------------------------------------------------------------------------------------
@@ -69,7 +69,7 @@ EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231130141100
 642970757724|RECORD_KEY_TEST_1|2023-11-01 00:00:00.000|I|2023-11-01 00:00:00.000|APP-OP|||9907819043|9907819043|O|||1||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\CR\
 EOF.1.9907819043.MOCK_SAMPLE.ENCTR.DF.1.20231105000000
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: C
 
 ---------------------------------------------------------------------------------------
 [E1P1Q3] Updating a encounter record in eHR
