@@ -135,7 +135,7 @@ The specifications of the Drug record can be located in the below link.
 
 Tips: The reference to Patient resource can be found in the Section 10.1.4 of the document.
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: CHAN TAI MAN
 
 ---------------------------------------------------------------------------------------
 [E1P2Q2] Referring to the sample file "RXO_sample_L3.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/RXO_sample_L3.json), what is the dosage frequency for Panadol ordered on 13 Mar 2023?
@@ -143,25 +143,25 @@ ANSWER: __PUT_YOUR_ANSWER_HERE__
 
 Tips: The reference to MedicationRequest resource can be found in the Section 10.1.6 of the document.
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: three times daily
 
 ---------------------------------------------------------------------------------------
 [E1P2Q3] Referring to the sample file "RXO_sample_L3.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/RXO_sample_L3.json), what is the terminology ID for "Panadol (paracetamol) oral tablet 500 mg (HK-02280)" in Hong Kong Medication Terminology Table (HKMTT)?
 ---------------------------------------------------------------------------------------
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: 6027457
 
 ---------------------------------------------------------------------------------------
 [E1P2Q4] Referring to the sample file "RXO_sample_L2.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_2_Drug_Record_Download/RXO_sample_L2.json), what is the coding system used for "PARACETAMOL (ORAL)"?
 ---------------------------------------------------------------------------------------
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: local
 
 ---------------------------------------------------------------------------------------
 [E1P2Q5] Referring to the Q3 and Q4 about "Paracetamol", which of the 2 coding systems is better for information exchange?
 ---------------------------------------------------------------------------------------
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: https://ehealth.gov.hk/hkmtt/
 
 
 
