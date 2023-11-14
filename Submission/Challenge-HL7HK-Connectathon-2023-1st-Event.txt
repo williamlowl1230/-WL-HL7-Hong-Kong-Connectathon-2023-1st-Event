@@ -188,7 +188,7 @@ The specifications of the GOPC PPP data can be located in the below link.
 
 Tips: The reference to QuestionnaireResponse resource can be found in the Section 11.4 of the document.
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: HT+DM+Hyperlipidaemia
 
 ---------------------------------------------------------------------------------------
 [E1P3Q2] Referring to the sample file "connectathon_ppp_sample_data.json"(https://github.com/hl7hongkong/HL7-Hong-Kong-Connectathon-2023-1st-Event/blob/main/Part_3_GOPC_PPP_Data_Download/connectathon_ppp_sample_data.json), what is the patient's body temperature?
@@ -196,4 +196,4 @@ ANSWER: __PUT_YOUR_ANSWER_HERE__
 
 Tips: The reference to QuestionnaireResponse resource can be found in the Section 11.4 of the document.
 
-ANSWER: __PUT_YOUR_ANSWER_HERE__
+ANSWER: 37.2
